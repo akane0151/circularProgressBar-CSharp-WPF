@@ -18,11 +18,20 @@ namespace circularProgressBar
     /// <summary>
     /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class progressbar : UserControl
     {
-        public UserControl1()
+
+        public progressbar()
         {
             InitializeComponent();
+        }
+        public void setprogress(int i)
+        {
+            Application.Current.Dispatcher.Invoke(new Action(() =>
+            {
+                progress.EndAngle = (Convert.ToDouble(i) / 100) * 360;
+                pgPerentage.Content = i.ToString() + "%";
+            }));
         }
     }
 }
