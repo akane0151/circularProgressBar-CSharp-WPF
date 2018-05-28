@@ -6,12 +6,12 @@
              xmlns:local="clr-namespace:circularProgressBar"
              xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="329.787">
-    <Grid>
-        <Ellipse Fill="#FFC5C5C5" Margin="23.333,1.998,27.333,2.335" Width="256" Height="256"/>
-        <Ellipse Fill="WhiteSmoke" Margin="65.833,46.333,70.833,44" Width="170" Height="170" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+             d:DesignHeight="256" d:DesignWidth="256">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Ellipse Fill="#FFC5C5C5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Ellipse Fill="WhiteSmoke" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="50"/>
 
-        <ed:Arc x:Name="progress" ArcThickness="30" EndAngle="0" Fill="#FF29B3C9" Margin="29.667,9.828,34,7.505" Stretch="None" StrokeThickness="0" Width="243" Height="243" RenderTransformOrigin="0.5,0.5">
+        <ed:Arc x:Name="progress" ArcThickness="40" EndAngle="180" Fill="#FF29B3C9" Margin="5" Stretch="None" StrokeThickness="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RenderTransformOrigin="0.5,0.5">
             <ed:Arc.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -21,7 +21,7 @@
                 </TransformGroup>
             </ed:Arc.RenderTransform>
         </ed:Arc>
-        <Label x:Name="pgPerentage" Content="0 %" Margin="115,118,117,119" FontSize="36" Foreground="#FF29B3C9" HorizontalAlignment="Center"/>
+        <Label x:Name="pgPerentage" Content="0 %" Margin="64,95,60,98" FontSize="36" Foreground="#FF29B3C9" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
     </Grid>
 </UserControl>
